@@ -3,6 +3,7 @@ mod abi;
 use base64::{decode_config, encode_config, URL_SAFE_NO_PAD};
 use prost::Message;
 // 声明 abi.rs
+use crate::pb::resize::SampleFilter;
 pub use abi::*;
 
 impl ImageSpec {
@@ -37,6 +38,32 @@ impl filter::Filter {
             filter::Filter::Oceanic => Some("oceanic"),
             filter::Filter::Islands => Some("islands"),
             filter::Filter::Marine => Some("marine"),
+        }
+    }
+}
+
+impl From<SampleFilter> for SampleFilter {
+    fn from(value: SampleFilter) -> Self {
+        match value {
+            SampleFilter::Undefined => SampleFilter::Nearest,
+            SampleFilter::Nearest => SampleFilter::Nearest,
+            SampleFilter::Triangle => SampleFilter::Triangle,
+            SampleFilter::CatmullRom => SampleFilter::CatmullRom,
+            SampleFilter::Gaussian => SampleFilter::Gaussian,
+            SampleFilter::Lanczos3 => SampleFilter::Lanczos3,
+        }
+    }
+}
+
+impl Spec {
+    pub fn new_resize_seam_carve(width: u32, height: u32) -> Self {
+        Self {
+            data: Some(spec::Data::Resize(Resize {
+                width,
+                height,
+                rtype: resize::ResizeType::SeamCarve as i32,
+                filter: resize::SampleFilter::Undefined as i32,
+            })),
         }
     }
 }
