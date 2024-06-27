@@ -3,7 +3,7 @@ syntax = "proto3";
 package abi; // 这个名字会被用作编译结果，prost 会产生：abi.rs
 
 // 一个 ImageSpec 是一个有序的数组，服务器按照 spec 的顺序处理
-message ImageSpec { repeated Spec specs = 1; }
+message ImageSpec {repeated Spec specs = 1;}
 
 // 处理图片改变大小
 message Resize {
@@ -42,7 +42,7 @@ message Fliph {}
 // 处理垂直翻转
 message Flipv {}
 // 处理对比度
-message Contrast { float contrast = 1; }
+message Contrast {float contrast = 1;}
 // 处理滤镜
 message Filter {
   enum Filter {
@@ -50,9 +50,16 @@ message Filter {
     OCEANIC = 1;
     ISLANDS = 2;
     MARINE = 3;
+    RADIO = 4;
+    TWENTIES = 5;
     // more: https://docs.rs/photon-rs/0.3.1/photon_rs/filters/fn.filter.html
   }
   Filter filter = 1;
+}
+// 处理油画效果
+message Oil {
+  uint32 radius = 1;
+  float intensity = 2;
 }
 
 // 处理水印
@@ -71,5 +78,6 @@ message Spec {
     Contrast contrast = 5;
     Filter filter = 6;
     Watermark watermark = 7;
+    Oil oil = 8;
   }
 }

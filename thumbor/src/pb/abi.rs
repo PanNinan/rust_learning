@@ -75,9 +75,19 @@ pub mod filter {
         Unspecified = 0,
         Oceanic = 1,
         Islands = 2,
-        /// more: https://docs.rs/photon-rs/0.3.1/photon_rs/filters/fn.filter.html
         Marine = 3,
+        Radio = 4,
+        /// more: https://docs.rs/photon-rs/0.3.1/photon_rs/filters/fn.filter.html
+        Twenties = 5,
     }
+}
+/// 处理油画效果
+#[derive(Clone, PartialEq, ::prost::Message)]
+pub struct Oil {
+    #[prost(uint32, tag="1")]
+    pub radius: u32,
+    #[prost(float, tag="2")]
+    pub intensity: f32,
 }
 /// 处理水印
 #[derive(Clone, PartialEq, ::prost::Message)]
@@ -90,7 +100,7 @@ pub struct Watermark {
 /// 一个 spec 可以包含上述的处理方式之一
 #[derive(Clone, PartialEq, ::prost::Message)]
 pub struct Spec {
-    #[prost(oneof="spec::Data", tags="1, 2, 3, 4, 5, 6, 7")]
+    #[prost(oneof="spec::Data", tags="1, 2, 3, 4, 5, 6, 7, 8")]
     pub data: ::core::option::Option<spec::Data>,
 }
 /// Nested message and enum types in `Spec`.
@@ -111,5 +121,7 @@ pub mod spec {
         Filter(super::Filter),
         #[prost(message, tag="7")]
         Watermark(super::Watermark),
+        #[prost(message, tag="8")]
+        Oil(super::Oil),
     }
 }

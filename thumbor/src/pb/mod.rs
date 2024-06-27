@@ -33,12 +33,14 @@ impl TryFrom<&str> for ImageSpec {
 
 // 辅助函数，photon_rs 相应的方法里需要字符串
 impl filter::Filter {
-    pub fn to_string(self) -> Option<&'static str> {
+    pub fn to_str(self) -> Option<&'static str> {
         match self {
             filter::Filter::Unspecified => None,
             filter::Filter::Oceanic => Some("oceanic"),
             filter::Filter::Islands => Some("islands"),
             filter::Filter::Marine => Some("marine"),
+            filter::Filter::Radio => Some("radio"),
+            filter::Filter::Twenties => Some("twenties"),
         }
     }
 }
@@ -90,6 +92,15 @@ impl Spec {
     pub fn new_watermark(x: u32, y: u32) -> Self {
         Self {
             data: Some(spec::Data::Watermark(Watermark { x, y })),
+        }
+    }
+    
+    pub fn new_oil(x: u32, y: f64) -> Self {
+        Self {
+            data: Some(spec::Data::Oil(Oil {
+                radius: x,
+                intensity: y as f32,
+            }))
         }
     }
 }
