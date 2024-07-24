@@ -1,0 +1,1 @@
+/Users/admin/code/rust/rust_learning/trait_1/target/debug/trait_1: /Users/admin/code/rust/rust_learning/trait_1/src/buf_builder.rs /Users/admin/code/rust/rust_learning/trait_1/src/developer.rs /Users/admin/code/rust/rust_learning/trait_1/src/main.rs /Users/admin/code/rust/rust_learning/trait_1/src/str_parser.rs

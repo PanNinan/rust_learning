@@ -1,0 +1,11 @@
+/Users/admin/code/rust/rust_learning/kv_server/target/debug/deps/libprost-f310718c32b0ef56.rmeta: /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/lib.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/error.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/message.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/types.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/encoding.rs
+
+/Users/admin/code/rust/rust_learning/kv_server/target/debug/deps/libprost-f310718c32b0ef56.rlib: /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/lib.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/error.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/message.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/types.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/encoding.rs
+
+/Users/admin/code/rust/rust_learning/kv_server/target/debug/deps/prost-f310718c32b0ef56.d: /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/lib.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/error.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/message.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/types.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/encoding.rs
+
+/Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/lib.rs:
+/Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/error.rs:
+/Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/message.rs:
+/Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/types.rs:
+/Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/prost-0.8.0/src/encoding.rs:

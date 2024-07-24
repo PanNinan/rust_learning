@@ -1,0 +1,8 @@
+/Users/admin/code/rust/rust_learning/kv_server/target/debug/deps/libthread_local-6c7c3e3ab136b9bd.rmeta: /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/lib.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/cached.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/thread_id.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/unreachable.rs
+
+/Users/admin/code/rust/rust_learning/kv_server/target/debug/deps/thread_local-6c7c3e3ab136b9bd.d: /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/lib.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/cached.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/thread_id.rs /Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/unreachable.rs
+
+/Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/lib.rs:
+/Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/cached.rs:
+/Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/thread_id.rs:
+/Users/admin/.cargo/registry/src/mirrors.ustc.edu.cn-12df342d903acd47/thread_local-1.1.8/src/unreachable.rs:
