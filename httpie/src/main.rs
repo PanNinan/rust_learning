@@ -1,15 +1,15 @@
 use std::collections::HashMap;
 use std::str::FromStr;
-use clap::{AppSettings, Parser};
+
 use anyhow::{anyhow, Result};
+use clap::{AppSettings, Parser};
 use colored::Colorize;
 use mime::Mime;
-use reqwest::{header, Client, Response, Url};
+use reqwest::{Client, header, Response, Url};
 use syntect::easy::HighlightLines;
 use syntect::highlighting::{Style, ThemeSet};
 use syntect::parsing::SyntaxSet;
 use syntect::util::{as_24_bit_terminal_escaped, LinesWithEndings};
-
 
 // 定义 HTTPie 的 CLI 的主入口，它包含若干个子命令
 // 下面 /// 的注释是文档，clap 会将其作为 CLI 的帮助
@@ -110,9 +110,10 @@ async fn print_resp(response: Response) -> Result<()> {
 }
 
 fn get_content_type(response: &Response) -> Option<Mime> {
-    response.headers().get(header::CONTENT_TYPE).map(|v| {
-        v.to_str().unwrap().parse().unwrap()
-    })
+    response
+        .headers()
+        .get(header::CONTENT_TYPE)
+        .map(|v| v.to_str().unwrap().parse().unwrap())
 }
 
 fn print_status(response: &Response) {
@@ -129,13 +130,13 @@ fn print_headers(response: &Response) {
 
 fn print_body(m: Option<Mime>, body: &String) {
     match m {
-        Some(v) if v == mime::APPLICATION_JSON => print_syntect(body, "json"),
-        Some(v) if v == mime::TEXT_HTML => print_syntect(body, "html"),
+        Some(v) if v == mime::APPLICATION_JSON => print_syntax(body, "json"),
+        Some(v) if v == mime::TEXT_HTML => print_syntax(body, "html"),
         _ => println!("{}", body),
     }
 }
 
-fn print_syntect(s: &str, ext: &str) {
+fn print_syntax(s: &str, ext: &str) {
     let ps = SyntaxSet::load_defaults_newlines();
     let ts = ThemeSet::load_defaults();
     let syntax = ps.find_syntax_by_extension(ext).unwrap();
@@ -153,7 +154,9 @@ async fn main() -> Result<()> {
     let mut headers = header::HeaderMap::new();
     headers.insert("X-POWERED-BY", "Rust".parse()?);
     headers.insert(header::USER_AGENT, "Rust Httpie".parse()?);
-    let client = reqwest::Client::builder().default_headers(headers).build()?;
+    let client = reqwest::Client::builder()
+        .default_headers(headers)
+        .build()?;
     let result = match opts.subcmd {
         SubCommand::Get(ref args) => get(client, args).await?,
         SubCommand::Post(ref args) => post(client, args).await?,
